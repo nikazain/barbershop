@@ -1,138 +1,68 @@
-body {
-  background-color: #ffff;
+:root {
+  /* Fonts */
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  /* Color */
+  --main-txt-cl: #555555;
+  --secondary-txt-cl: #303030;
+  --light-txt-cl: #ffffff;
+  --accent-txt-cl: #ff6c00;
+  --accent-bg-cl: #ff6c00;
+  /* Other */
 }
 
 /* Base styles */
-.section {
+body {
+  background-color: #ffff;
+  font-family: Open Sans;
+  font-size: 16px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
 }
 .list {
+  list-style: none;
 }
 .link {
   text-decoration: none;
+  color: var(--main-txt-cl);
+}
+.visually-hidden {
+  position: Absolute;
+  widths: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-:root {
-}
-.text-style-main-title {
-  font-size: 72px;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-style: normal;
-  line-height: 85px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  text-transform: none;
-}
-.text-style-slider-btn {
-  font-size: 11px;
-  font-family: "Open Sans";
+.uppertitle {
   font-weight: 600;
-  font-style: normal;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  text-transform: none;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--secondary-txt-cl);
 }
-.text-style-main-text-theme-light {
-  font-size: 18px;
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  text-transform: none;
-}
-.text-style-main-text-theme-dark {
-  font-size: 18px;
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  text-transform: none;
-}
-.text-style-title-theme-dark {
+.title {
+  font-family: var(--secondary-font);
   font-size: 42px;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-style: normal;
-  line-height: 49px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
-  text-decoration: none;
-  text-transform: none;
+  color: var(--secondary-txt-cl);
 }
-.text-style-title-theme-light {
-  font-size: 42px;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-style: normal;
-  line-height: 49px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  text-transform: none;
+.title-light {
+  color: var(--light-txt-cl);
 }
-.text-style-uppertitle-theme-dark {
-  font-size: 11px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
+.btn {
+  font-family: inherit;
 }
-.text-style-uppertitle-theme-light {
-  font-size: 11px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.text-style-small-text-theme-light {
-  font-size: 11px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 15px;
-  letter-spacing: 0.2em;
-  text-decoration: none;
-  text-transform: none;
-}
-.text-style-small-text-theme-dark {
-  font-size: 11px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 15px;
-  letter-spacing: 0.2em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.text-style-button-text-theme-dark {
-  font-size: 12px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.text-style-button-text-theme-light {
-  font-size: 12px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-style: normal;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+
 /* Header */
 .header {
+  background-color: #111319;
 }
 .header-logo {
 }
@@ -144,11 +74,43 @@ body {
 }
 .header-nav-item {
 }
-.header-nav-link {
-}
+.header-nav-link,
 .header-contact {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--light-txt-cl);
 }
-.header-btn {
+.header-nav-link:hover,
+.header-nav-link:focus,
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-bg-cl);
+}
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--secondary-txt-cl);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--light-txt-cl);
+  background-color: var(--accent-bg-cl);
+}
+.btn-light {
+  color: var(--light-txt-cl);
+}
+/* Hero */
+.hero {
+  background-color: #111319;
 }
 /* About */
 .about {
@@ -157,9 +119,6 @@ body {
 }
 .about-item {
 }
-.about-uppertitle {
-}
-
 .about-desc {
 }
 
@@ -168,9 +127,9 @@ body {
 
 /* Services and Prices */
 .prices {
+  background-color: #111319;
 }
-.prices-uppertitle {
-}
+
 #services-and-prices {
 }
 .prices-list {
@@ -185,7 +144,7 @@ body {
 }
 .benefits-list {
 }
-.benefits-ite {
+.benefits-item {
 }
 .benefits-value {
 }
@@ -193,8 +152,7 @@ body {
 }
 .benefits-tex {
 }
-.benefits-uppertitle {
-}
+
 .benefits-header {
 }
 .benefits-desc {
@@ -203,3 +161,7 @@ body {
 
 /* Gallery section */
 /* Booking section */
+/* Contacts */
+.contacts {
+  background-color: #111319;
+}

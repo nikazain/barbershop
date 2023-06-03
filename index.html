@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barber Shop</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Fonts styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+   <!-- Custon styles -->
+<link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section-->
@@ -20,22 +25,22 @@
             height="76"
         /></a>
         <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item"><a class="link" href="#about">About</a></li>
-            <li class="header-nav-item"><a class="link" href="#services-and-prices">Serivces and prices</a></li>
-            <li class="header-nav-item"><a class="link" href="#barbers">Barbers</a></li>
-            <li class="header-nav-item"><a class="link" href="#contacts">Contacts</a></li>
+          <ul class="header-nav-list list">
+            <li class="header-nav-item"><a class="header-nav-link link" href="#about">About</a></li>
+            <li class="header-nav-item"><a class="header-nav-link link" href="#services-and-prices">Serivces and prices</a></li>
+            <li class="header-nav-item"><a class="header-nav-link link" href="#barbers">Barbers</a></li>
+            <li class="header-nav-item"><a class="header-nav-link link" href="#contacts">Contacts</a></li>
           </ul>
         </nav>
-        <a class="link" class="header-contact" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="header-btn" type="button">Online-booking</button>
+        <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <button class="btn btn-light" type="button">Online-booking</button>
       </div>
     </header>
     <!-- Main-->
     <main>
       <!-- Hero section-->
-      <section class="hero section">
-        <ul>
+      <section class="hero">
+        <ul class="list">
           <li>
             <a class="link" 
               href="https://Instagram.com"
@@ -53,21 +58,21 @@
             >
           </li>
         </ul>
-        <p>A hair salon for men in Kyiv</p>
+        <p class="uppertitle">A hair salon for men in Kyiv</p>
         <h1>Barber Shop</h1>
         <p>
           We are experts in trendy men's haircuts. We work quickly, carefully
           and with style.
         </p>
         <!--Slider controls-->
-        <ul>
+        <ul class="list">
           <li><button type="button">Back</button></li>
           <li><button type="button">Forward</button></li>
         </ul>
       </section>
       <!-- About section-->
       <section class="about">
-        <ul class="about-list">
+        <ul class="about-list list">
           <li class="about-item">
             <img class="about-img" 
               src="./images/about/img-1.jpg"
@@ -85,7 +90,7 @@
             />
           </li>
         </ul>
-        <p class="about-uppertitle">ABOUT</p>
+        <p class="uppertitle">About</p>
         <h2 class="about-title" id="about">Best barbershop in your city</h2>
         <p class="about-subtitle">
           If you want to add more confidence to your image, you should visit us.
@@ -97,15 +102,15 @@
           same wave" with clients. Therefore, we are always ready to improve
           everyone who comes to us!
         </p>
-        <button class="about-btn" type="button">Online-booking</button>
+        <button class="btn" type="button">Online-booking</button>
       </section>
       <!-- Services and prices section-->
       <section class="prices">
-        <p class="prices-uppertitle">Spend your time with the best masters</p>
-        <h2 id="services-and-prices">Services and Prices</h2>
-        <ul class="prices-list">
+        <p class="uppertitle">Spend your time with the best masters</p>
+        <h2 id="services-and-prices" class="title title-light">Services and Prices</h2>
+        <ul class="prices-list list">
           <li>
-            <ul>
+            <ul class="list">
               <li class="prices-item">Men's haircut from 300 uah.</li>
               <li class="prices-item">Beard trim from 300 uah.</li>
               <li class="prices-item">Mushtache trim from 200 uah.</li>
@@ -113,7 +118,7 @@
             </ul>
           </li>
           <li>
-            <ul>
+            <ul class="list">
               <li>Trainee's haircut from 50 uah.</li>
               <li>Haircut under the nozzle from 200 uah.</li>
               <li>Children's haircut (0-12 y.o.) from 300 uah.</li>
@@ -122,11 +127,11 @@
           </li>
         </ul>
 
-        <button class="prices-btn" type="button">Online booking</button>
+        <button class="btn btn-light" type="button">Online booking</button>
       </section>
       <!-- Benefits section-->
       <section class="benefits">
-        <ul class="benefits-list">
+        <ul class="benefits-list list">
           <li class="benefits-item">
             <p class="benefits-value">600<sup class="benefits-sup">+</sup></p>
             <p class="benefits-text">Satisfied customers per day</p>
@@ -144,7 +149,7 @@
             <p class="benefits-text">Gifts for regular customers</p>
           </li>
         </ul>
-        <p class="benefits-uppertitle">Old traditional school</p>
+        <p class="uppertitle">Old traditional school</p>
         <h2 class="benefits-header">Why people come to us?</h2>
         <p class="benefits-desc">
           Only good things are said about us. But it's better to see and feel 1
@@ -154,9 +159,9 @@
       <!-- Barbers section-->
       <section>
         <!--add the insta and other logos-->
-        <p>For true enjoyers of the atmosphere</p>
+        <p class="uppertitle">For true enjoyers of the atmosphere</p>
         <h2 id="barbers">Our barbers</h2>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/team/img-4.jpg"
@@ -191,9 +196,9 @@
       </section>
       <!-- Gallery section-->
       <section>
-        <p>In Latin, "barba" means "beard"</p>
-        <h2>Barbershop Gallery</h2>
-        <ul>
+        <p class="uppertitle">In Latin, "barba" means "beard"</p>
+        <h2 class="visually-hidden">Barbershop Gallery</h2>
+        <ul class="list">
           <li>
             <img
               src="./images/gallery/img-7.jpg"
@@ -233,8 +238,8 @@
         <h2 id="online-booking">Online-booking</h2>
       </section>
       <!-- Contacts section-->
-      <section>
-        <h2 id="contacts">Contacts</h2>
+      <section class="contacts">
+        <h2 id="contacts" class="title title-light">Contacts</h2>
         <address>
           <a class="link"
             href="https://goo.gl/maps/2Lu11rghbmuY24UQ8?coh=178571&entry=tt"
@@ -246,7 +251,7 @@
           <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
           <a class="link" href="mailto:barbershop@email.com">barbershop@email.com</a>
         </address>
-        <h3>Working hours</h3>
+        <h3 class="uppertitle">Working hours</h3>
         <p>
           Every day from <time datetime="09:00">9:00</time> to
           <time datetime="22:00">22:00</time>
@@ -259,7 +264,7 @@
       <footer class="footer">
         <div class="container">
           <p class="footer-copyright">&#169; Copyright 2020</p>
-          <ul class="media">
+          <ul class="media-list list">
             <li class="media-item">
               <a class="link"
                 href="https://instagram.com"
