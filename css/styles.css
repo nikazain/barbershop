@@ -4,13 +4,16 @@
   --secondary-font: "Raleway", sans-serif;
   /* Color */
   --main-txt-cl: #555555;
+  --main-txt-grey: hsl(227, 20%, 68%);
   --main-bg-cl: #111319;
   --secondary-txt-cl: #303030;
   --light-txt-cl: #ffffff;
   --accent-txt-cl: #ff6c00;
   --accent-bg-cl: #ff6c00;
-
+  --uppertitle-grey-cl: rgba(157, 164, 189, 0.6);
   /* Other */
+  --indent: 30px;
+  --items: 3;
 }
 /* Base styles */
 body {
@@ -74,6 +77,9 @@ button {
   text-transform: uppercase;
   color: var(--secondary-txt-cl);
 }
+.uppertitle-light {
+  color: var(--grey-cl);
+}
 .title {
   margin-bottom: 20px;
   font-family: var(--secondary-font);
@@ -95,6 +101,9 @@ button {
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
 }
+.main-text-light {
+  color: var(--main-txt-grey);
+}
 .btn {
   min-width: 160px;
   min-height: 40px;
@@ -111,11 +120,19 @@ button {
   border: 1px solid #ff6c00;
   border-radius: 25px;
 }
-
 .btn:hover,
 .btn:focus {
   color: var(--light-txt-cl);
   background-color: var(--accent-bg-cl);
+}
+/* Card set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set-item {
+  flex-basis: calc(100%-var(--indent) * (var(--items)-1) / var(--items));
 }
 
 /* Header */
@@ -187,7 +204,6 @@ button {
 .media-links:focus {
   color: var(--accent-txt-cl);
 }
-
 /* About */
 .about {
 }
@@ -206,44 +222,45 @@ button {
 .about-right-side {
   width: 470px;
 }
+.about-subtitle {
+  margin-bottom: 20px;
+}
 .about-desc {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.86;
-  letter-spacing: 0.02em;
-  color: var(--main-txt-cl);
+  margin-bottom: 42px;
 }
 .btn-white {
   color: var(--main-txt-cl);
 }
-
 /* Services and Prices */
 .prices {
   background-color: #111319;
 }
-#services-and-prices {
-}
+
 .prices-list {
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: space-between;
 }
 .prices-item {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
 }
-.sap-btn {
-  color: var(--light-txt-cl);
+.price-inner-list {
+  width: 570px;
+  padding: 30px 20px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
-
+.price-inner-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.prices-btn {
+  display: block;
+  margin: 0 auto;
+}
 /* Benefits Section */
 .benefits {
 }
-
 .benefits-list {
 }
 .benefits-item {
@@ -282,6 +299,10 @@ button {
 .barbers-section {
   background: #f7f7f7;
 }
+.team-list {
+}
+.team-item {
+}
 .barbers-name {
   font-family: "Open Sans";
   font-style: normal;
@@ -304,18 +325,28 @@ button {
 }
 /* Gallery section */
 /* Booking section */
+.page-wrap {
+  background-color: var(--main-bg-cl);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.booking-section {
+  background-color: var(--main-bg-cl);
+  flex-basis: 560px;
+}
 /* Contacts */
 .contacts {
   background-color: #111319;
+  flex-basis: 570px;
 }
-
 .contacts-adress {
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-  color: #9da4bd;
+  color: var(--main-txt-grey);
 }
 .contacts-info {
   font-family: var(--primary-font);
