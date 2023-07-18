@@ -17,12 +17,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
-    <!-- Custon styles -->
+    <!-- Animation on scroll -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section-->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-logo link" href="./index.html">
           <!-- <img
@@ -60,7 +62,7 @@
         <a class="header-contact link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="btn" type="button">Online-booking</button>
+        <button class="header-btn btn" type="button" data-modal-open>Online-booking</button>
       </div>
     </header>
     <!-- Main-->
@@ -69,7 +71,7 @@
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-leftside">
-            <ul class="media list">
+            <ul class="hero-media media list">
               <li>
                 <a
                   class="link media-links"
@@ -91,9 +93,9 @@
             </ul>
           </div>
           <div class="hero-rightside">
-            <p class="uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
+            <p class="hero-uppertitle uppertitle uppertitle-light" style="--direction: -1">A hair salon for men in Kyiv</p>
             <h1 class="hero-title">Barber Shop</h1>
-            <p class="main-text hero-text main-text-light">
+            <p class="main-text hero-desc main-text-light" style="--direction: 1">
               We are experts in trendy men's haircuts. We work quickly, carefully
               and with style.
             </p>
@@ -242,7 +244,7 @@
               <div class="team-wrapper">
                 <h3 class="barbers-name">John Smith</h3>
                 <p class="barbers-extreme">Extreme Barber</p>
-              <ul class="media list">
+              <ul class="media-list list">
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#instagram"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#twitter"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#facebook"></use></svg></a></li>
@@ -265,7 +267,7 @@
               <div class="team-wrapper">
                 <h3 class="barbers-name">Michele Doe</h3>
                 <p class="barbers-extreme">Extreme Barber</p>
-              <ul class="media list">
+              <ul class="media-list list">
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#instagram"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#twitter"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#facebook"></use></svg></a></li>
@@ -288,7 +290,7 @@
               <div class="team-wrapper">
                 <h3 class="barbers-name">Alan Black</h3>
                 <p class="barbers-extreme">Extreme Barber</p>
-               <ul class="media list">
+               <ul class="media-list list">
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#instagram"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#twitter"></use></svg></a></li>
                 <li class="media-item"><a class="media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="media-icon" width="20" height="20"> <use href="./icons.svg#facebook"></use></svg></a></li>
@@ -305,7 +307,7 @@
           <p class="uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Barbershop Gallery</h2>
           <ul class="list card-set">
-            <li class="card-set-item">
+            <li class="card-set-item" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
               <img
                 src="./images/gallery/img-7.jpg"
                 alt=""
@@ -313,7 +315,7 @@
                 heoght="360"
               />
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item" data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
               <img
                 src="./images/gallery/img-8.jpg"
                 alt=""
@@ -321,7 +323,7 @@
                 heoght="360"
               />
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item" data-aos="fade-right" data-aos-duration="600" data-aos-delay="900">
               <img
                 src="./images/gallery/img-9.jpg"
                 alt=""
@@ -329,7 +331,7 @@
                 heoght="360"
               />
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item" data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200">
               <img
                 src="./images/gallery/img-10.jpg"
                 alt=""
@@ -382,7 +384,7 @@
     <footer class="footer">
       <div class="container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
-        <ul class="media-list list">
+        <ul class="media list">
           <li class="media-item">
             <a
               class="link footer-btn"
@@ -407,14 +409,20 @@
       </div>
     </footer>
      <!-- Modal Window -->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn">
-          <svg class="modal-close-icon" width="8" height="8">
+        <button class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="12" height="12">
             <use href="./icons.svg#close"></use>
           </svg>
         </button>
       </div>
     </div>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animation-on-scroll.js"></script>
+  
+    <script src="./js/header.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
