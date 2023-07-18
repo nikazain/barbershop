@@ -419,6 +419,29 @@ button {
   letter-spacing: 0.02em;
   color: var(--accent-txt-cl);
 }
+.team-image {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: transform 250ms ease;
+  background-color: rgba(23, 26, 36, 0.3);
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+.overlay-text {
+  color: white;
+}
+.team-image:hover .overlay {
+  transform: translateX(0);
+}
+
 /* Media icon */
 .media {
   display: flex;
