@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Header section-->
-    <!-- <header class="header" data-header>
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-logo link" href="./index.html">
          
@@ -57,7 +57,7 @@
         >
         <button class="header-btn btn" type="button" data-modal-open>Online-booking</button>
       </div>
-    </header> -->
+    </header>
     <!-- Main-->
     <main>
       <!-- Hero section-->
@@ -339,6 +339,15 @@
          <section class="section booking-section">
           <div class="">
             <h2 class="title title-light" id="online-booking">Online-booking</h2>
+            <form class="booking-form" name="booking_form" autocomplete="on">
+              <div class="booking-form-wrapper">
+                <label class="booking-form-field"><input class="booking-form-input" type="text" name="user_name"><span class="booking-form-tag">Name*</span></label>
+                <label class="booking-form-field"><input class="booking-form-input" type="tel" name="user_input"><span class="booking-form-tag">Phone*</span></label>
+              </div>
+              <label> <textarea name="user-message"  rows="6" placeholder="Type your message..."
+                ></textarea><span class="booking-form-tag">Message</span></label>
+              <button class="btn btn-white" type="submit">Send</button>
+            </form>
           </div>
         </section>
         <!-- Contacts section-->
@@ -408,6 +417,37 @@
             <use href="./icons.svg#close"></use>
           </svg>
         </button>
+        <p>Leave you contacts and we will call you back</p>
+        <form name="modal_form">
+          <label for="modal_name">Name</label>
+          <div>
+            <input class="" type="text" name="modal_name" id="modal_name">
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <label for="modal_phone">Phone</label>
+          <div>
+            <input class="" type="text" name="modal_phone" id="modal_phone">
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <label for="modal_email">Email</label>
+          <div>
+            <input class="" type="text" name="modal_email" id="modal_email">
+            <svg class="" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </div>
+          <label for="modal_comment">Comment</label>
+          <textarea name="modal_comment" id="modal_comment" rows="6" placeholder="Text input"></textarea>
+          <label>
+            <input type="checkbox" name="modal_agreement">
+            <span>I accept the terms and conditions of the <a href="">Privacy Policy</a></span>
+          </label>
+          <button class="btn btn-white" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <!-- AOS -->
@@ -416,5 +456,6 @@
   
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

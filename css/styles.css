@@ -341,11 +341,13 @@ button {
 .hero-title {
   font-family: var(--secondary-font);
   font-weight: 700;
+  width: 444px;
   font-size: 72px;
   line-height: 1.18;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.05em;
   color: var(--light-txt-cl);
   margin-bottom: 20px;
+  text-align: center;
 
   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 2200ms
     both;
@@ -637,6 +639,7 @@ button {
 /* Gallery section */
 
 /* Booking section */
+
 .page-wrapper {
   background-color: var(--main-bg-cl);
   display: flex;
@@ -650,6 +653,9 @@ button {
 .booking-section {
   background-color: var(--main-bg-cl);
   flex-basis: 560px;
+}
+label {
+  display: block;
 }
 /* Contacts */
 .contacts {
