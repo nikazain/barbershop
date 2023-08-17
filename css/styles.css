@@ -64,36 +64,16 @@ button {
   overflow: hidden;
 }
 .section {
-  padding: 84px 0;
-  /* padding: 120px 0; */
-}
-@media only screen (min-width: 768px) {
-  .section {
-    padding: 100px 0;
-  }
+  padding: 12px 0;
 }
 
 .container {
-  /* Basic styles */
-  min-width: 320px;
-  max-width: 448px;
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 
   outline: 2px solid red;
   outline-offset: -2px;
-}
-/* Tablet Screen */
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-/* Decstop Screen */
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 768px;
-  }
 }
 
 .uppertitle {
