@@ -64,6 +64,7 @@ button {
   overflow: hidden;
 }
 .section {
+  margin: 120px 0;
   padding: 12px 0;
 }
 
@@ -652,10 +653,100 @@ button {
 }
 .booking-section {
   background-color: var(--main-bg-cl);
-  flex-basis: 560px;
+  flex-basis: 570px;
 }
-label {
+.booking-form-wrapper {
+  margin-bottom: 44px;
+  display: flex;
+  gap: 30px;
+}
+.booking-form-field {
   display: block;
+  position: relative;
+  flex-basis: 270px;
+}
+.booking-form-input,
+.booking-form-message {
+  padding-right: 24px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 24px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  color: #9da4bd;
+  transition: border-color var(--anim-fast);
+}
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown),
+.booking-form-message:focus,
+.booking-form-message:not(:placeholder-shown) {
+  border-bottom: 1px solid var(--light-txt-cl);
+}
+
+.booking-form-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transform-origin: left center;
+  transition: transform var(--anim-fast), color var(--anim-fast);
+}
+.booking-form-input:focus + .booking-form-tag,
+.booking-form-input:not(:placeholder-shown) + .booking-form-tag,
+.booking-form-message:focus + .booking-form-tag,
+.booking-form-message:not(:placeholder-shown) + .booking-form-tag {
+  transform: translateY(-100%) scale(0.8);
+  color: var(--light-txt-cl);
+}
+
+.booking-form-icon {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(0);
+  fill: currentColor;
+  transition: opacity var(--anim-fast), fill var(--anim-fast),
+    transform var(--anim-fast);
+}
+.booking-form-input:not(:placeholder-shown):focus:required:invalid
+  ~ .booking-form-icon {
+  opacity: 1;
+  fill: red;
+  transform: translateY(-50%) scale(1);
+}
+.booking-form-input:not(:placeholder-shown):focus:required:valid
+  ~ .booking-form-icon {
+  opacity: 1;
+  fill: lightgreen;
+  transform: translateY(-50%) scale(1);
+}
+.booking-form-message {
+  width: 100%;
+  height: 76px;
+  padding: 6px 0;
+  resize: none;
+}
+.booking-form-message::placeholder {
+  opacity: 0;
+}
+.booking-form-message:focus::placeholder {
+  opacity: 1;
+  transition: opacity var(--anim-fast);
+  transition-delay: 300ms;
+}
+.booking-form-btn {
+  margin-top: 44px;
 }
 /* Contacts */
 .contacts {

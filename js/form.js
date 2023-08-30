@@ -3,8 +3,8 @@ const phoneEl = document.querySelector('.booking-form-input[type="tel"]');
 const formIconEl = document.querySelector('[data-form-icon]');
 const formFieldEl = document.querySelector('[data-form-field]');
 
-Inputmask('+38 (0**) 999-99-99', {
-  placeholder: '*',
+Inputmask('+38 (099) 999-99-99', {
+  placeholder: '_',
   showMaskOnHover: false,
   oncomplete: () => {
     formIconEl.classList.add('valid-phone');
